@@ -32,19 +32,21 @@ public class loop {
 			boolean prime= true;
 			System.out.printf("Prime Numbers: ");
 			System.out.printf("2 ");
-			for (int i=2;i<1000;i++){
-				if (NumArr[i]%2==1){
-					for (int j=NumArr[i]-1;j>=2;j--){
-						if (NumArr[i]%j==0){
+			for (int i=3;i<=1000;i++){
+			    if (i%2==1){
+			        prime = true;
+					for (int j=i-1;j>=2;j--){
+						if (i%j==0){
 							prime = false;
+							j=1;
 						}
 					}
 					if (prime == true){
-						System.out.printf("%d ",NumArr[i]);
+						System.out.printf("%d ",i);
 					}
 				}
+				}
 			}
-		}
 		else if (check ==4){
 			//multiple: 
 			int multiple;
